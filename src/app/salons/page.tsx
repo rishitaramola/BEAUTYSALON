@@ -24,13 +24,18 @@ const filters = Object.keys(filterMap);
 function SalonsContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category') || 'All';
+  const searchParam = searchParams.get('search') || '';
 
   const [activeFilter, setActiveFilter] = useState(categoryParam);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(searchParam);
 
   useEffect(() => {
     setActiveFilter(categoryParam);
   }, [categoryParam]);
+
+  useEffect(() => {
+    setSearchQuery(searchParam);
+  }, [searchParam]);
 
   const filteredSalons = SALONS.filter(salon => {
     const matchesSearch = searchQuery === '' ||

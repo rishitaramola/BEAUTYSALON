@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Search, MapPin, Star, ChevronRight, Sparkles } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import FloatingCosmetics from '@/components/3d/FloatingCosmetics';
@@ -8,11 +9,22 @@ import SalonCard from '@/components/salon/SalonCard';
 import { SALONS, CATEGORIES, REVIEWS } from '@/lib/data/salons';
 import Rating from '@/components/ui/Rating';
 import Badge from '@/components/ui/Badge';
+import { useState } from 'react';
 
 export default function Home() {
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [locationQuery, setLocationQuery] = useState('');
   const featuredSalons = SALONS.filter(s => s.badges.includes('Top Rated') || s.badges.includes('Premium Salon')).slice(0, 4);
   const totalReviews = SALONS.reduce((acc, s) => acc + s.reviewCount, 0);
   const totalSalons = SALONS.length;
+
+  const handleHeroSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const params = new URLSearchParams();
+    if (searchQuery.trim()) params.set('search', searchQuery.trim());
+    router.push(`/salons${params.toString() ? '?' + params.toString() : ''}`);
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -45,26 +57,30 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="glass-panel p-2 rounded-full flex flex-col sm:flex-row items-center gap-2 max-w-2xl shadow-lg"
           >
-            <div className="flex-1 flex items-center gap-3 px-4 py-3 w-full">
-              <Search className="w-5 h-5 text-outline" />
-              <input 
-                type="text" 
-                placeholder="Services, salons, or treatments" 
-                className="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-outline-variant font-medium"
-              />
-            </div>
-            <div className="hidden sm:block w-[1px] h-8 bg-outline-variant/30" />
-            <div className="flex-1 flex items-center gap-3 px-4 py-3 w-full">
-              <MapPin className="w-5 h-5 text-outline" />
-              <input 
-                type="text" 
-                placeholder="Mumbai, IN" 
-                className="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-outline-variant font-medium"
-              />
-            </div>
-            <Link href="/salons" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full rounded-full">Search</Button>
-            </Link>
+            <form onSubmit={handleHeroSearch} className="flex-1 flex flex-col sm:flex-row items-center gap-2 w-full">
+              <div className="flex-1 flex items-center gap-3 px-4 py-3 w-full">
+                <Search className="w-5 h-5 text-outline shrink-0" />
+                <input 
+                  type="text"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  placeholder="Services, salons, or treatments" 
+                  className="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-outline-variant font-medium"
+                />
+              </div>
+              <div className="hidden sm:block w-[1px] h-8 bg-outline-variant/30" />
+              <div className="flex-1 flex items-center gap-3 px-4 py-3 w-full">
+                <MapPin className="w-5 h-5 text-outline shrink-0" />
+                <input 
+                  type="text"
+                  value={locationQuery}
+                  onChange={e => setLocationQuery(e.target.value)}
+                  placeholder="Mumbai, IN" 
+                  className="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-outline-variant font-medium"
+                />
+              </div>
+              <Button type="submit" size="lg" className="w-full sm:w-auto rounded-full">Search</Button>
+            </form>
           </motion.div>
           
           <motion.div 
