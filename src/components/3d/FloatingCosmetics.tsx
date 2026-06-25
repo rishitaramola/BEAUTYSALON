@@ -23,8 +23,8 @@ export default function FloatingCosmetics() {
         style={{ y: y1 }}
       >
         <img 
-          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&q=80" 
-          alt="Premium Cosmetics" 
+          src="/images/hero-salon.png" 
+          alt="Luxury Salon Interior" 
           className="w-64 h-64 object-cover rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(212,175,55,0.4)] border-4 border-white"
         />
       </motion.div>
@@ -36,8 +36,8 @@ export default function FloatingCosmetics() {
       >
         <div className="w-32 h-32 rounded-full overflow-hidden border-[3px] border-white shadow-[0_15px_40px_-10px_rgba(212,175,55,0.3)]">
           <img 
-            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&q=80" 
-            alt="Serum" 
+            src="/images/hero-makeup.png" 
+            alt="Luxury Makeup" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -50,8 +50,8 @@ export default function FloatingCosmetics() {
       >
         <div className="w-40 h-40 rounded-[2rem] overflow-hidden border-[3px] border-white shadow-[0_15px_40px_-10px_rgba(212,175,55,0.3)] rotate-[-10deg]">
           <img 
-            src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300&q=80" 
-            alt="Perfume" 
+            src="/images/hero-nails.png" 
+            alt="Aesthetic Nails" 
             className="w-full h-full object-cover"
           />
         </div>
