@@ -9,6 +9,7 @@ import SalonCard from '@/components/salon/SalonCard';
 import { SALONS, CATEGORIES, REVIEWS } from '@/lib/data/salons';
 import Rating from '@/components/ui/Rating';
 import Badge from '@/components/ui/Badge';
+import FloatingBows from '@/components/3d/FloatingBows';
 import { useState } from 'react';
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* HERO SECTION */}
       <section className="relative w-full max-w-[1280px] mx-auto px-6 pt-6 pb-12 md:pt-10 md:pb-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-8 min-h-[90vh]">
+        <FloatingBows />
         <div className="flex-1 space-y-8 z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
