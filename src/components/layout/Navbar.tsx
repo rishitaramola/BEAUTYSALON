@@ -178,10 +178,10 @@ export default function Navbar() {
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <span className="flex items-baseline gap-[2px]">
-              <span style={{fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 900}} className="text-2xl text-on-surface tracking-tight">
+              <span style={{fontFamily: '"Playfair Display", serif', fontWeight: 900}} className="text-2xl text-on-surface tracking-tight">
                 BE
               </span>
-              <span style={{fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 900, background: 'linear-gradient(135deg, #d91c5c 0%, #f4a0c0 60%, #c2527f 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="text-2xl">
+              <span style={{fontFamily: '"Playfair Display", serif', fontWeight: 900, background: 'linear-gradient(135deg, #d91c5c 0%, #f4a0c0 60%, #c2527f 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="text-2xl">
                 &nbsp;YOU
               </span>
               <span className="text-primary text-lg ml-0.5 mb-0.5">✦</span>
@@ -240,10 +240,10 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary-container" />
             <span className="flex items-baseline gap-[2px]">
-              <span style={{fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 900}} className="text-xl text-on-surface tracking-tight">
+              <span style={{fontFamily: '"Playfair Display", serif', fontWeight: 900}} className="text-xl text-on-surface tracking-tight">
                 BE
               </span>
-              <span style={{fontFamily: '"Playfair Display", serif', fontStyle: 'italic', fontWeight: 900, background: 'linear-gradient(135deg, #d91c5c 0%, #f4a0c0 60%, #c2527f 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="text-xl">
+              <span style={{fontFamily: '"Playfair Display", serif', fontWeight: 900, background: 'linear-gradient(135deg, #d91c5c 0%, #f4a0c0 60%, #c2527f 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="text-xl">
                 &nbsp;YOU
               </span>
               <span className="text-primary text-base ml-0.5">✦</span>
