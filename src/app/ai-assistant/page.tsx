@@ -22,6 +22,11 @@ export default function AIAssistant() {
   const handleSend = (text: string) => {
     if (!text.trim()) return;
 
+    if (text === 'Start Over') {
+      setMessages([INITIAL_AI_MESSAGE]);
+      return;
+    }
+
     // Add user message
     const userMsg: AIMessage = {
       id: Date.now().toString(),
@@ -34,18 +39,16 @@ export default function AIAssistant() {
 
     // Simulate AI response
     setTimeout(() => {
-      const lowerText = text.toLowerCase();
-      let aiResponse = AI_RESPONSES['analyze skin']; // default fallback
+      let aiResponse = AI_RESPONSES[text] || AI_RESPONSES['Hair'];
       
-      // Basic matching logic for mock
-      if (lowerText.includes('hair')) aiResponse = AI_RESPONSES['hair suggestions'];
-      if (lowerText.includes('routine')) aiResponse = AI_RESPONSES['generate daily routine'];
-
       const newAiMsg = { ...aiResponse, id: Date.now().toString() };
       setMessages(prev => [...prev, newAiMsg]);
       setIsTyping(false);
-    }, 1500);
+    }, 1000);
   };
+
+  const lastAiMessage = [...messages].reverse().find(m => m.role === 'ai');
+  const activePrompts = lastAiMessage?.prompts || [];
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 h-[calc(100vh-8rem)] flex flex-col relative">
@@ -92,28 +95,13 @@ export default function AIAssistant() {
               {msg.cards && msg.cards.length > 0 && (
                 <div className="ml-11 mt-3 flex flex-wrap gap-3">
                   {msg.cards.map((card, i) => (
-                    <div key={i} className="glass-card bg-white p-3 rounded-2xl w-64 flex flex-col gap-3 cursor-pointer">
+                    <div key={i} className="glass-card bg-white p-3 rounded-2xl w-64 flex flex-col gap-3 cursor-pointer hover:shadow-md transition-shadow">
                       <img src={card.image} alt={card.title} className="w-full h-32 object-cover rounded-xl" />
                       <div>
                         <h4 className="font-bold text-sm line-clamp-1">{card.title}</h4>
                         <p className="text-xs text-on-surface-variant line-clamp-1">{card.subtitle}</p>
                       </div>
                     </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Quick Prompts */}
-              {msg.prompts && (
-                <div className="ml-11 mt-4 flex flex-wrap gap-2">
-                  {msg.prompts.map((prompt) => (
-                    <button 
-                      key={prompt} 
-                      onClick={() => handleSend(prompt)}
-                      className="px-4 py-2 rounded-full bg-surface-container-low border border-primary/20 text-xs font-bold text-primary hover:bg-primary-container/10 transition-colors"
-                    >
-                      {prompt}
-                    </button>
                   ))}
                 </div>
               )}
@@ -140,7 +128,7 @@ export default function AIAssistant() {
       <div className="glass-panel p-4 rounded-b-[2.5rem] bg-white border-t border-outline-variant/20">
         <p className="text-xs text-center text-on-surface-variant mb-3 font-medium">Choose an option below:</p>
         <div className="flex flex-wrap gap-2 justify-center">
-          {SUGGESTED_PROMPTS.map(p => (
+          {activePrompts.map(p => (
             <button 
               key={p} 
               onClick={() => handleSend(p)}
