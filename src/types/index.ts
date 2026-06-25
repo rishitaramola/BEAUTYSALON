@@ -8,7 +8,7 @@ export interface Salon {
   distance: string;
   rating: number;
   reviewCount: number;
-  priceLevel: '£' | '££' | '£££' | '££££';
+  priceLevel: string;
   priceFrom: number;
   currency: string;
   image: string;
