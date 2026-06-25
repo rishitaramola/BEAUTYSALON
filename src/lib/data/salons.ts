@@ -3,7 +3,7 @@ import { Salon } from '@/types';
 export const SALONS: Salon[] = [
   {
     id: 'salon-1',
-    name: 'Maison de Beauté',
+    name: 'Enrich Salon',
     tagline: 'Where Luxury Meets Artistry',
     location: 'Bandra West, Mumbai',
     city: 'Mumbai, IN',
@@ -41,7 +41,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-2',
-    name: 'The Ivory Retreat',
+    name: 'Lakme Salon',
     tagline: 'Immerse in Pure Serenity',
     location: 'Juhu, Mumbai',
     city: 'Mumbai, IN',
@@ -76,7 +76,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-3',
-    name: 'Atelier Blanc',
+    name: 'BBeyond Hair and Beauty Family Salon',
     tagline: 'The Art of Perfect Nails',
     location: 'Colaba, Mumbai',
     city: 'Mumbai, IN',
@@ -109,7 +109,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-4',
-    name: 'Aura Studio Elegance',
+    name: 'Jade Salon',
     tagline: 'Premium Salon Experience',
     location: 'Powai, Mumbai',
     city: 'Mumbai, IN',
@@ -144,7 +144,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-5',
-    name: 'Maison de l\'Or',
+    name: 'Jean-Claude Biguine',
     tagline: 'The Gold Standard of Beauty',
     location: 'Lower Parel, Mumbai',
     city: 'Mumbai, IN',
@@ -176,7 +176,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-6',
-    name: 'L\'Atelier Mumbai',
+    name: 'K Prive',
     tagline: 'Crafting Beauty with Precision',
     location: 'Khar West, Mumbai',
     city: 'Mumbai, IN',
@@ -206,7 +206,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-7',
-    name: 'Minimaliste Nails',
+    name: 'BBlunt',
     tagline: 'Less is More. Always.',
     location: 'Andheri West, Mumbai',
     city: 'Mumbai, IN',
@@ -236,7 +236,7 @@ export const SALONS: Salon[] = [
   },
   {
     id: 'salon-8',
-    name: 'Aura Clinic',
+    name: 'Toni & Guy',
     tagline: 'Science-Led Beauty',
     location: 'Worli, Mumbai',
     city: 'Mumbai, IN',
