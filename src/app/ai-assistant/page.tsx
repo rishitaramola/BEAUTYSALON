@@ -75,7 +75,7 @@ export default function AIAssistant() {
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="font-heading font-bold text-2xl">Lumière Assistant</h1>
+            <h1 className="font-heading font-bold text-2xl">BE YOU Assistant</h1>
             <p className="text-sm text-primary font-medium flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Always ready to help

@@ -143,7 +143,7 @@ export default function Home() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <div className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mb-2 uppercase tracking-widest">
-              <Sparkles className="w-4 h-4" /> Lumière Curated
+              <Sparkles className="w-4 h-4" /> BE YOU Curated
             </div>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-on-surface">Premium Experiences</h2>
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
                     <Sparkles className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-on-surface">Lumière AI</p>
+                    <p className="text-sm font-semibold text-on-surface">BE YOU AI</p>
                     <p className="text-[10px] text-primary font-medium">Online</p>
                   </div>
                 </div>

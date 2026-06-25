@@ -177,8 +177,8 @@ export default function Navbar() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-container to-rose-gold flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
-            <span className="font-heading font-bold text-xl text-on-surface">
-              Lumi<span className="text-primary-container">è</span>re
+            <span className="font-heading font-black text-xl text-on-surface tracking-tight">
+              BE <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-rose-gold">YOU</span>
             </span>
           </Link>
 
@@ -233,8 +233,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-5 h-14">
           <Link href="/" className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary-container" />
-            <span className="font-heading font-bold text-lg text-on-surface">
-              Lumi<span className="text-primary-container">è</span>re
+            <span className="font-heading font-black text-lg text-on-surface tracking-tight">
+              BE <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-rose-gold">YOU</span>
             </span>
           </Link>
           <div className="flex items-center gap-2">

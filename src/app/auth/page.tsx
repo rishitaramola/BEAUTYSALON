@@ -30,7 +30,7 @@ export default function AuthPage() {
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h1 className="font-heading font-bold text-3xl mb-2">Welcome to Lumière</h1>
+                  <h1 className="font-heading font-bold text-3xl mb-2">Welcome to BE YOU</h1>
                   <p className="text-on-surface-variant">Enter your phone number to sign in or create an account.</p>
                 </div>
 

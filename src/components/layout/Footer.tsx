@@ -12,8 +12,8 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-container to-rose-gold flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="font-heading font-bold text-2xl text-on-surface">
-                Lumi<span className="text-primary-container">è</span>re
+              <span className="font-heading font-black text-2xl text-on-surface tracking-tight">
+                BE <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-rose-gold">YOU</span>
               </span>
             </Link>
             <p className="text-sm text-on-surface-variant leading-relaxed mb-6">
@@ -66,7 +66,7 @@ export default function Footer() {
 
         <div className="divider-gold mb-6" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-on-surface-variant">© 2026 Lumière. All rights reserved. SuperXgen AI Startup Buildathon 2026.</p>
+          <p className="text-xs text-on-surface-variant">© 2026 BE YOU. All rights reserved. SuperXgen AI Startup Buildathon 2026.</p>
           <div className="flex items-center gap-6">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (
               <a key={l} href="#" className="text-xs text-on-surface-variant hover:text-primary transition-colors">{l}</a>

@@ -3,7 +3,7 @@ import { AIMessage } from '@/types';
 export const INITIAL_AI_MESSAGE: AIMessage = {
   id: 'msg-0',
   role: 'ai',
-  content: "Hello! I am your Lumière AI Beauty Assistant. 💫\n\nI can help you find the perfect salon or service tailored to your needs.\n\nWhat are you looking for today?",
+  content: "Hello! I am your BE YOU AI Beauty Assistant. 💫\n\nI can help you find the perfect salon or service tailored to your needs.\n\nWhat are you looking for today?",
   timestamp: new Date().toISOString(),
   prompts: ['Hair', 'Nails', 'Makeup', 'Skincare', 'Spa & Massage', 'Bridal Couture'],
 };

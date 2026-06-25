@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Lumière | AI Beauty Salon Marketplace',
+  title: 'BE YOU | AI Beauty Salon Marketplace',
   description: 'The premier AI-powered beauty marketplace connecting you with world-class salons and stylists.',
 };
 

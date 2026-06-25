@@ -18,7 +18,7 @@ export default function UserDashboard() {
         />
         <div>
           <h1 className="font-heading font-bold text-3xl">Welcome back, Rishita!</h1>
-          <p className="text-on-surface-variant">Lumière Premium Member</p>
+          <p className="text-on-surface-variant">BE YOU Premium Member</p>
         </div>
       </div>
 
@@ -29,7 +29,7 @@ export default function UserDashboard() {
           <div className="glass-panel p-6 rounded-3xl bg-gradient-to-br from-primary-container/20 to-rose-gold/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/20 blur-2xl rounded-full" />
             <div className="flex items-center gap-2 text-on-surface-variant font-medium mb-2">
-              <Wallet className="w-5 h-5" /> Lumière Wallet
+              <Wallet className="w-5 h-5" /> BE YOU Wallet
             </div>
             <p className="font-heading font-bold text-4xl text-on-surface mb-1">₹4,500.00</p>
             <p className="text-xs text-on-surface-variant">Available Balance</p>
