@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lumière – AI Beauty Salon Marketplace
 
-## Getting Started
+Welcome to **Lumière**, a premium AI-powered beauty salon marketplace built for the **SuperXgen AI Startup Buildathon 2026**.
 
-First, run the development server:
+## 🌟 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Lumière redefines the beauty booking experience by seamlessly connecting users with world-class salons, stylists, and aesthetic clinics. Designed with the luxurious **Aura & Gilded Luxe** design system, Lumière offers a modern, high-end feel that rivals top funded startups. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Immersive Discovery**: Browse top-rated and AI-recommended salons through an interactive, visually stunning interface.
+- **Smart AI Assistant**: A built-in AI concierge that provides personalized beauty recommendations, analyzes skin types, and finds perfect matches.
+- **Frictionless Booking Flow**: A seamless 3-step booking wizard (Service → Stylist → Date & Time) that ensures an effortless user journey.
+- **Digital Passport Check-in**: High-end animated booking confirmations with QR code passports for quick check-ins.
+- **Comprehensive Dashboards**: 
+  - *User Dashboard*: Manage wallet balances, upcoming bookings, and saved salons.
+  - *Owner Dashboard*: Advanced analytics, staff status monitoring, and daily schedules using Recharts.
+- **Responsive & Dynamic Design**: Built with smooth micro-interactions, 3D floating cosmetics animations, and custom glassmorphism utilities.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technology Stack
 
-## Learn More
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (using the new `@theme inline` architecture)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the application locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone this repository.
+2. Navigate to the project directory:
+   ```bash
+   cd lumiere-app
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/src/app`: Contains all Next.js 14 App Router pages (Home, Salons, Booking, Dashboards, Auth).
+- `/src/components`: Reusable UI components (Buttons, Cards, Ratings) and Layout components.
+- `/src/lib/data`: Mock data for salons, bookings, and AI responses.
+- `/src/types`: TypeScript definitions for the entire application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Built with precision and elegance for the SuperXgen AI Startup Buildathon 2026.*
