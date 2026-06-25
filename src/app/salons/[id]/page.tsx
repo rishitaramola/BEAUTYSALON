@@ -23,8 +23,8 @@ export default function SalonDetail() {
             <img src={salon.images[0]} alt={salon.name} className="w-full h-full object-cover" />
           </div>
           <div className="hidden md:grid col-span-1 grid-rows-2 gap-2">
-            <img src={salon.images[1]} alt={salon.name} className="w-full h-full object-cover" />
-            <img src={salon.images[2]} alt={salon.name} className="w-full h-full object-cover" />
+            <img src={salon.images[1] || salon.images[0]} alt={salon.name} className="w-full h-full object-cover" />
+            <img src={salon.images[2] || salon.images[0]} alt={salon.name} className="w-full h-full object-cover" />
           </div>
           <div className="hidden md:block col-span-1 relative">
             <img src={salon.images[3] || salon.images[0]} alt={salon.name} className="w-full h-full object-cover" />
