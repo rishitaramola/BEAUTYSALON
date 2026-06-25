@@ -265,15 +265,22 @@ export const SALONS: Salon[] = [
   },
 ];
 
+// Dynamically compute category counts from real salon service data
+const countSalonsByCategory = (keyword: string) =>
+  SALONS.filter(s =>
+    s.tags.some(t => t.toLowerCase().includes(keyword.toLowerCase())) ||
+    s.services.some(sv => sv.category.toLowerCase().includes(keyword.toLowerCase()))
+  ).length;
+
 export const CATEGORIES = [
-  { id: 'cat-1', name: 'Hair Styling', icon: '✂️', count: 124 },
-  { id: 'cat-2', name: 'Spa & Massage', icon: '🌿', count: 89 },
-  { id: 'cat-3', name: 'Makeup', icon: '💄', count: 67 },
-  { id: 'cat-4', name: 'Bridal Couture', icon: '💍', count: 34 },
-  { id: 'cat-5', name: 'Nail Art', icon: '💅', count: 92 },
-  { id: 'cat-6', name: 'Skincare', icon: '✨', count: 78 },
-  { id: 'cat-7', name: 'Brows & Lashes', icon: '👁️', count: 56 },
-  { id: 'cat-8', name: 'Wellness', icon: '🧘', count: 43 },
+  { id: 'cat-1', name: 'Hair Styling', icon: '✂️', count: countSalonsByCategory('hair') },
+  { id: 'cat-2', name: 'Spa & Massage', icon: '🌿', count: countSalonsByCategory('massage') },
+  { id: 'cat-3', name: 'Makeup', icon: '💄', count: countSalonsByCategory('makeup') },
+  { id: 'cat-4', name: 'Bridal Couture', icon: '💍', count: countSalonsByCategory('bridal') },
+  { id: 'cat-5', name: 'Nail Art', icon: '💅', count: countSalonsByCategory('nail') },
+  { id: 'cat-6', name: 'Skincare', icon: '✨', count: countSalonsByCategory('skin') },
+  { id: 'cat-7', name: 'Brows & Lashes', icon: '👁️', count: countSalonsByCategory('brow') },
+  { id: 'cat-8', name: 'Wellness', icon: '🧘', count: countSalonsByCategory('wellness') },
 ];
 
 export const REVIEWS = [

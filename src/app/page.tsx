@@ -11,6 +11,8 @@ import Badge from '@/components/ui/Badge';
 
 export default function Home() {
   const featuredSalons = SALONS.filter(s => s.badges.includes('Top Rated') || s.badges.includes('Premium Salon')).slice(0, 4);
+  const totalReviews = SALONS.reduce((acc, s) => acc + s.reviewCount, 0);
+  const totalSalons = SALONS.length;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -76,7 +78,7 @@ export default function Home() {
                 <img key={i} src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
               ))}
             </div>
-            <p>Join <span className="text-on-surface font-bold">10k+</span> beauty enthusiasts</p>
+            <p>Join <span className="text-on-surface font-bold">{totalReviews}+</span> happy clients across Mumbai</p>
           </motion.div>
         </div>
 
@@ -111,7 +113,7 @@ export default function Home() {
                 <div className="text-4xl group-hover:scale-110 transition-transform duration-300">{cat.icon}</div>
                 <div>
                   <h3 className="font-heading font-semibold text-on-surface group-hover:text-primary transition-colors">{cat.name}</h3>
-                  <p className="text-xs text-on-surface-variant mt-1">{cat.count} Salons</p>
+                  <p className="text-xs text-on-surface-variant mt-1">{cat.count} {cat.count === 1 ? 'Salon' : 'Salons'} in Mumbai</p>
                 </div>
               </motion.div>
             ))}
@@ -229,8 +231,8 @@ export default function Home() {
       {/* REVIEWS SECTION */}
       <section className="py-24 max-w-[1280px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-on-surface mb-4">Loved by Thousands</h2>
-          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">Experience the luxury and precision that keeps our community coming back.</p>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-on-surface mb-4">Loved by {totalReviews}+ Clients</h2>
+          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">Across {totalSalons} premium salons in Mumbai — real experiences from real people.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
