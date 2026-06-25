@@ -171,7 +171,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Desktop Navbar */}
-      <header className="hidden md:flex fixed top-0 left-0 right-0 z-50 glass-panel border-b border-outline-variant/20">
+      <header className="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#e6c27a]/30 via-[#fde08b]/20 to-[#e6c27a]/30 backdrop-blur-xl border-b border-[#e6c27a]/40 shadow-sm">
         <div className="max-w-[1280px] mx-auto w-full px-6 flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-container to-rose-gold flex items-center justify-center">
@@ -227,7 +227,7 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Top Bar */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-50 glass-panel border-b border-outline-variant/20">
+      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#e6c27a]/30 via-[#fde08b]/20 to-[#e6c27a]/30 backdrop-blur-xl border-b border-[#e6c27a]/40 shadow-sm">
         <div className="flex items-center justify-between px-5 h-14">
           <Link href="/" className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary-container" />
